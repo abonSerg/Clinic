@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd4fe70f-c4ce-45f7-bbd8-3c412efac68e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50534/EntityServices/VisitService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VisitService.disco" MetadataType="Disco" ID="0662ef0e-6537-47d7-b145-5e889730c072" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/VisitService.svc?disco" />
+    <MetadataFile FileName="VisitService.xsd" MetadataType="Schema" ID="ce381c23-b4fb-4fd3-8306-b1bc24406151" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/VisitService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VisitService1.xsd" MetadataType="Schema" ID="4ae17fb1-5d56-4c31-b211-d0bfd2870fb3" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/VisitService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VisitService.wsdl" MetadataType="Wsdl" ID="6e767416-bf78-46ba-bca7-12cb7fcb4114" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/VisitService.svc?wsdl" />
+    <MetadataFile FileName="VisitService1.wsdl" MetadataType="Wsdl" ID="8c850491-2f99-421a-89fa-4c067a95e1a7" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/VisitService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

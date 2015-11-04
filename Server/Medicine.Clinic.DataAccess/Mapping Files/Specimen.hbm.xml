@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.Specimen, Medicine.Clinic.DataAccess" table="specimens" lazy="true">
+
+    <id name="Id" column="id" type="Int32"/>
+    <property name="Code" column ="code" type="String"/>
+    <property name="Name" column ="name" type="String"/>
+    <many-to-one name="DefaultTube" column ="default_tube" class="Medicine.Clinic.DataAccess.Tube" />
+
+
+  </class>
+</hibernate-mapping>

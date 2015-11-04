@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Medicine.Clinic.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Medicine.Clinic.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50534/EntityServices/InterpretationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfDtoConcreteDiagnosis">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DtoConcreteDiagnosis" nillable="true" type="tns:DtoConcreteDiagnosis" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDtoConcreteDiagnosis" nillable="true" type="tns:ArrayOfDtoConcreteDiagnosis" />
+  <xs:complexType name="DtoConcreteDiagnosis">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Diagnosis" nillable="true" type="tns:DtoDiagnosis" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:DtoOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoConcreteDiagnosis" nillable="true" type="tns:DtoConcreteDiagnosis" />
+  <xs:complexType name="DtoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DtoEntity" nillable="true" type="tns:DtoEntity" />
+  <xs:complexType name="DtoDiagnosis">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoDiagnosis" nillable="true" type="tns:DtoDiagnosis" />
+  <xs:complexType name="DtoOrder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClinicalInfo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Visit" nillable="true" type="tns:DtoVisit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoOrder" nillable="true" type="tns:DtoOrder" />
+  <xs:complexType name="DtoVisit">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apartment" nillable="true" type="tns:DtoApartment" />
+          <xs:element minOccurs="0" name="BillingNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Doctor" nillable="true" type="tns:DtoDoctor" />
+          <xs:element minOccurs="0" name="Patient" nillable="true" type="tns:DtoPatient" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoVisit" nillable="true" type="tns:DtoVisit" />
+  <xs:complexType name="DtoApartment">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BedId" type="xs:int" />
+          <xs:element minOccurs="0" name="Clinic" nillable="true" type="tns:DtoClinic" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RoomId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoApartment" nillable="true" type="tns:DtoApartment" />
+  <xs:complexType name="DtoClinic">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoClinic" nillable="true" type="tns:DtoClinic" />
+  <xs:complexType name="DtoDoctor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clinic" nillable="true" type="tns:DtoClinic" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoDoctor" nillable="true" type="tns:DtoDoctor" />
+  <xs:complexType name="DtoPatient">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Age" type="xs:int" />
+          <xs:element minOccurs="0" name="Dob" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Dod" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mrn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sex" nillable="true" type="tns:DtoSex" />
+          <xs:element minOccurs="0" name="Ssn" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoPatient" nillable="true" type="tns:DtoPatient" />
+  <xs:complexType name="DtoSex">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoSex" nillable="true" type="tns:DtoSex" />
+  <xs:complexType name="DtoInterpretation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Condition" type="ser:char" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Order" nillable="true" type="tns:DtoOrder" />
+          <xs:element minOccurs="0" name="SignOutDt" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoInterpretation" nillable="true" type="tns:DtoInterpretation" />
+</xs:schema>

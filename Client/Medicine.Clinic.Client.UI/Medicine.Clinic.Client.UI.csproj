@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A655334-E183-4C5C-8505-D5694A7B78E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISD.Clinic.Client.UI</RootNamespace>
+    <AssemblyName>ISD.Clinic.Client.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClinicDataSetAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClinicDataSet\ClinicDataSetAccess\bin\Debug\ClinicDataSetAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpf.Core.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v12.2.Core, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApartmentUI\Apartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApartmentUI\Apartment.Designer.cs">
+      <DependentUpon>Apartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillingUI\Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingUI\Billing.Designer.cs">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUpForm.Designer.cs">
+      <DependentUpon>SetUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentUI\NewApartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApartmentUI\NewApartment.Designer.cs">
+      <DependentUpon>NewApartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEnum.cs" />
+    <Compile Include="FormBuilder.cs" />
+    <Compile Include="InterpretationUI\Interpretation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterpretationUI\Interpretation.Designer.cs">
+      <DependentUpon>Interpretation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicUI\NewClinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClinicUI\NewClinic.Designer.cs">
+      <DependentUpon>NewClinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorUI\NewDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorUI\NewDoctor.Designer.cs">
+      <DependentUpon>NewDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiagnosisUI\NewDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiagnosisUI\NewDiagnosis.Designer.cs">
+      <DependentUpon>NewDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndicationUI\NewIndication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndicationUI\NewIndication.Designer.cs">
+      <DependentUpon>NewIndication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitUI\NewVisit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitUI\NewVisit.Designer.cs">
+      <DependentUpon>NewVisit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderUI\NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderUI\NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderUI\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderUI\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientUI\NewPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientUI\NewPatient.Designer.cs">
+      <DependentUpon>NewPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientUI\Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientUI\Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SexUI\NewSex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SexUI\NewSex.Designer.cs">
+      <DependentUpon>NewSex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestUI\NewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestUI\NewTest.Designer.cs">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecimenUI\NewSpecimen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecimenUI\NewSpecimen.Designer.cs">
+      <DependentUpon>NewSpecimen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TubeUI\NewTube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TubeUI\NewTube.Designer.cs">
+      <DependentUpon>NewTube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TubeUI\Tube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TubeUI\Tube.Designer.cs">
+      <DependentUpon>Tube.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisitUI\Visit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitUI\Visit.Designer.cs">
+      <DependentUpon>Visit.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApartmentUI\Apartment.resx">
+      <DependentUpon>Apartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingUI\Billing.resx">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUpForm.resx">
+      <DependentUpon>SetUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterpretationUI\Interpretation.resx">
+      <DependentUpon>Interpretation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClinicUI\NewClinic.resx">
+      <DependentUpon>NewClinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorUI\NewDoctor.resx">
+      <DependentUpon>NewDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiagnosisUI\NewDiagnosis.resx">
+      <DependentUpon>NewDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndicationUI\NewIndication.resx">
+      <DependentUpon>NewIndication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApartmentUI\NewApartment.resx">
+      <DependentUpon>NewApartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitUI\NewVisit.resx">
+      <DependentUpon>NewVisit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderUI\NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderUI\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientUI\NewPatient.resx">
+      <DependentUpon>NewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientUI\Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SexUI\NewSex.resx">
+      <DependentUpon>NewSex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestUI\NewTest.resx">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecimenUI\NewSpecimen.resx">
+      <DependentUpon>NewSpecimen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TubeUI\NewTube.resx">
+      <DependentUpon>NewTube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TubeUI\Tube.resx">
+      <DependentUpon>Tube.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitUI\Visit.resx">
+      <DependentUpon>Visit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISD.Clinic.Client.Model\Medicine.Clinic.Client.Model.csproj">
+      <Project>{e10b40cb-474b-4a46-ba88-1a05f08996de}</Project>
+      <Name>Medicine.Clinic.Client.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISD.Clinic.Client.Presentation\Medicine.Clinic.Client.Presentation.csproj">
+      <Project>{c99388a8-be4e-4459-a292-8c0e02852cb9}</Project>
+      <Name>Medicine.Clinic.Client.Presentation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

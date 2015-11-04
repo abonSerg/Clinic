@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0e6da2d-3897-41c6-93d1-915e1b5a0fed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50534/EntityServices/InterpretationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InterpretationService.disco" MetadataType="Disco" ID="cd7e6d91-9d1c-484c-a2dd-bf3f542be26b" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?disco" />
+    <MetadataFile FileName="InterpretationService.wsdl" MetadataType="Wsdl" ID="ca38cc01-c8df-4910-a040-54499256d1e8" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InterpretationService.xsd" MetadataType="Schema" ID="f161a28f-849c-4430-ad62-94c57512dd46" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InterpretationService1.wsdl" MetadataType="Wsdl" ID="efa7873d-517c-49f6-8e6c-646226208231" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?wsdl" />
+    <MetadataFile FileName="InterpretationService1.xsd" MetadataType="Schema" ID="8b1bd606-1e73-44de-9d09-fd6137a823b4" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InterpretationService2.xsd" MetadataType="Schema" ID="93eeccd7-0fda-4e15-83b1-77d60e2f70e3" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/InterpretationService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

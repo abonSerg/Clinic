@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="99a0dd4c-9996-4571-a184-5ab4fc534023" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50534/EntityServices/IndicationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IndicationService.disco" MetadataType="Disco" ID="e0a5959b-a014-491a-a3f1-a1e0285a94ac" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?disco" />
+    <MetadataFile FileName="IndicationService.xsd" MetadataType="Schema" ID="bc88ae3a-4b35-4e0a-9685-07f13a2c0b54" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="IndicationService1.xsd" MetadataType="Schema" ID="4c6a0f68-5764-4f38-b1b5-6298305173f8" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="IndicationService.wsdl" MetadataType="Wsdl" ID="d98d254e-bbf4-4859-9ce1-e159d7b0ddda" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?wsdl" />
+    <MetadataFile FileName="IndicationService2.xsd" MetadataType="Schema" ID="f53b6192-d893-40a7-818d-08e3fc414f88" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="IndicationService1.wsdl" MetadataType="Wsdl" ID="98cd8a7b-10e8-4ec5-82eb-c0ee94fe6d7b" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/IndicationService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

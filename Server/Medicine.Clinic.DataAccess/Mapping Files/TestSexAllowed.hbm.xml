@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.TestSexAllowed, Medicine.Clinic.DataAccess" table="tests_sex_allowed" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <many-to-one name="Test" column ="test_id" class="Medicine.Clinic.DataAccess.Test"/>
+    <many-to-one name="Sex" column ="sex_id" class="Medicine.Clinic.DataAccess.Sex"/>
+  </class>
+</hibernate-mapping>

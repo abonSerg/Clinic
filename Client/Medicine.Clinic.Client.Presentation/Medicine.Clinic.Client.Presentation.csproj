@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C99388A8-BE4E-4459-A292-8C0E02852CB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISD.Clinic.Client.Presentation</RootNamespace>
+    <AssemblyName>ISD.Clinic.Client.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClinicDataSetAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ClinicDataSet\ClinicDataSetAccess\bin\Debug\ClinicDataSetAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApartmentPresenters\ApartmentPresenter.cs" />
+    <Compile Include="BillingPresenters\BillingPresenter.cs" />
+    <Compile Include="ClinicPresenters\ClinicPresenter.cs" />
+    <Compile Include="DiagnosisPresenters\DiagnosisPresenter.cs" />
+    <Compile Include="DoctorPresenters\DoctorPresenter.cs" />
+    <Compile Include="ViewInterfaces\ApartmentViewInterfaces\IApartmentView.cs" />
+    <Compile Include="ViewInterfaces\ApartmentViewInterfaces\INewApartmentEditView.cs" />
+    <Compile Include="ViewInterfaces\ApartmentViewInterfaces\INewApartmentView.cs" />
+    <Compile Include="ApartmentPresenters\NewApartmentEditPresenter.cs" />
+    <Compile Include="ApartmentPresenters\NewApartmentPresenter.cs" />
+    <Compile Include="ViewInterfaces\BillingViewInterfaces\IBillingView.cs" />
+    <Compile Include="ViewInterfaces\InterpretationViewInterfaces\IInterpretationView.cs" />
+    <Compile Include="InterpretationPresenters\InterpretationPresenter.cs" />
+    <Compile Include="ViewInterfaces\VisitViewInterfaces\INewVisitEditView.cs" />
+    <Compile Include="VisitPresenters\NewVisitEditPresenter.cs" />
+    <Compile Include="ViewInterfaces\VisitViewInterfaces\INewVisitView.cs" />
+    <Compile Include="VisitPresenters\NewVisitPresenter.cs" />
+    <Compile Include="ViewInterfaces\VisitViewInterfaces\IVisitView.cs" />
+    <Compile Include="ViewInterfaces\OrderViewInterfaces\INewOrderEditView.cs" />
+    <Compile Include="OrderPresenters\NewOrderEditPresenter.cs" />
+    <Compile Include="ViewInterfaces\OrderViewInterfaces\INewOrderView.cs" />
+    <Compile Include="OrderPresenters\NewOrderPresenter.cs" />
+    <Compile Include="ViewInterfaces\OrderViewInterfaces\IOrderView.cs" />
+    <Compile Include="OrderPresenters\OrderPresenter.cs" />
+    <Compile Include="ViewInterfaces\PatientViewInterfaces\INewPatientEditView.cs" />
+    <Compile Include="ViewInterfaces\PatientViewInterfaces\INewPatientView.cs" />
+    <Compile Include="ViewInterfaces\PatientViewInterfaces\IPatientView.cs" />
+    <Compile Include="PatientPresenters\NewPatientEditPresenter.cs" />
+    <Compile Include="PatientPresenters\NewPatientPresenter.cs" />
+    <Compile Include="PatientPresenters\PatientPresenter.cs" />
+    <Compile Include="ViewInterfaces\IndicationViewInterfaces\INewIndicationEditView.cs" />
+    <Compile Include="IndicationPresenters\NewIndicationEditPresenter.cs" />
+    <Compile Include="ViewInterfaces\IndicationViewInterfaces\INewIndicationView.cs" />
+    <Compile Include="IndicationPresenters\NewIndicationPresenter.cs" />
+    <Compile Include="ViewInterfaces\IndicationViewInterfaces\IIndicationView.cs" />
+    <Compile Include="IndicationPresenters\IndicationPresenter.cs" />
+    <Compile Include="ViewInterfaces\DiagnosisViewInterfaces\INewDiagnosisEditView.cs" />
+    <Compile Include="ViewInterfaces\DiagnosisViewInterfaces\INewDiagnosisView.cs" />
+    <Compile Include="DiagnosisPresenters\NewDiagnosisEditPresenter.cs" />
+    <Compile Include="DiagnosisPresenters\NewDiagnosisPresenter.cs" />
+    <Compile Include="ViewInterfaces\DiagnosisViewInterfaces\IDiagnosisView.cs" />
+    <Compile Include="ViewInterfaces\DoctorViewInterfaces\IDoctorView.cs" />
+    <Compile Include="ViewInterfaces\DoctorViewInterfaces\INewDoctorEditView.cs" />
+    <Compile Include="ViewInterfaces\DoctorViewInterfaces\INewDoctorView.cs" />
+    <Compile Include="DoctorPresenters\NewDoctorEditPresenter.cs" />
+    <Compile Include="DoctorPresenters\NewDoctorPresenter.cs" />
+    <Compile Include="ViewInterfaces\SexViewInterfaces\INewSexEditView.cs" />
+    <Compile Include="ViewInterfaces\SexViewInterfaces\INewSexView.cs" />
+    <Compile Include="ViewInterfaces\SexViewInterfaces\ISexView.cs" />
+    <Compile Include="SexPresenters\NewSexEditPresenter.cs" />
+    <Compile Include="SexPresenters\NewSexPresenter.cs" />
+    <Compile Include="SexPresenters\SexPresenter.cs" />
+    <Compile Include="ViewInterfaces\TestViewIntarfaces\INewTestEditView.cs" />
+    <Compile Include="ViewInterfaces\TestViewIntarfaces\INewTestView.cs" />
+    <Compile Include="ViewInterfaces\TestViewIntarfaces\ITestView.cs" />
+    <Compile Include="TestPresenters\NewTestEditPresenter.cs" />
+    <Compile Include="TestPresenters\NewTestPresenter.cs" />
+    <Compile Include="TestPresenters\TestPresenter.cs" />
+    <Compile Include="ViewInterfaces\SpecimenViewInterfaces\INewSpecimenEditView.cs" />
+    <Compile Include="ViewInterfaces\SpecimenViewInterfaces\INewSpecimenView.cs" />
+    <Compile Include="ViewInterfaces\SpecimenViewInterfaces\ISpecimenView.cs" />
+    <Compile Include="SpecimenPresenters\NewSpecimenEditPresenter.cs" />
+    <Compile Include="SpecimenPresenters\NewSpecimenPresenter.cs" />
+    <Compile Include="SpecimenPresenters\SpecimenPresenter.cs" />
+    <Compile Include="ViewInterfaces\ClinicViewInterfaces\INewClinicEditView.cs" />
+    <Compile Include="ViewInterfaces\ClinicViewInterfaces\INewClinicView.cs" />
+    <Compile Include="MainPresenter.cs" />
+    <Compile Include="ClinicPresenters\NewClinicEditPresenter.cs" />
+    <Compile Include="ClinicPresenters\NewClinicPresenter.cs" />
+    <Compile Include="TubePresenters\NewTubeEditPresenter.cs" />
+    <Compile Include="TubePresenters\NewTubePresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TubePresenters\TubePresenter.cs" />
+    <Compile Include="ViewInterfaces\ClinicViewInterfaces\IClinicView.cs" />
+    <Compile Include="ViewInterfaces\IMainView.cs" />
+    <Compile Include="ViewInterfaces\TubeViewIntefaces\INewTubeEditView.cs" />
+    <Compile Include="ViewInterfaces\TubeViewIntefaces\INewTubeView.cs" />
+    <Compile Include="ViewInterfaces\TubeViewIntefaces\ITubeView.cs" />
+    <Compile Include="VisitPresenters\VisitPresenter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISD.Clinic.Client.Model\Medicine.Clinic.Client.Model.csproj">
+      <Project>{e10b40cb-474b-4a46-ba88-1a05f08996de}</Project>
+      <Name>Medicine.Clinic.Client.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

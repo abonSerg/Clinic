@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.ConcreteSpecimen, Medicine.Clinic.DataAccess" table="concrete_specimens" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <property name="Code" column ="code" type="String"/>
+    <many-to-one name="Order" column ="order_id" class="Medicine.Clinic.DataAccess.Order"/>
+    <many-to-one name="Specimen" column ="specimen_id" class="Medicine.Clinic.DataAccess.Specimen"/>
+    <property name="CollectedDt" column ="collected_dt" type="DateTime"/>
+    <property name="Volume" column ="volume" type="Int32"/>
+  </class>
+</hibernate-mapping>

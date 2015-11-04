@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.Interpretation, Medicine.Clinic.DataAccess" table="interpretations" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <many-to-one name="Order" column ="order_id" class="Medicine.Clinic.DataAccess.Order"/>
+    <property name="Text" column ="text" type="String"/>
+    <property name="Condition" column ="condition" type="Char"/>
+    <property name="SignOutDt" column ="sign_out_dt" type="DateTime"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e5934596-6dff-4fc2-ac1a-a4f8b30cf8d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50534/EntityServices/TubeService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TubeService.wsdl" MetadataType="Wsdl" ID="2869bddb-3efd-42f4-85f4-26f6b873f69e" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="TubeService.xsd" MetadataType="Schema" ID="7f2eaa1a-4919-4f92-b119-cde30f6ab901" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TubeService1.xsd" MetadataType="Schema" ID="5966af64-55ea-463b-9d89-6cbdeb9581b9" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TubeService2.xsd" MetadataType="Schema" ID="3610fbc2-3b73-40d3-9869-36d09ead5cbd" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TubeService1.wsdl" MetadataType="Wsdl" ID="eb6d9ab6-41ac-4fd8-84df-cf3a7c5674aa" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?wsdl" />
+    <MetadataFile FileName="TubeService.disco" MetadataType="Disco" ID="13fa8116-9e04-4952-860f-72f620bf0868" SourceId="1" SourceUrl="http://localhost:50534/EntityServices/TubeService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

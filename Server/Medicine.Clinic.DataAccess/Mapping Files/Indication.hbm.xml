@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.Indication, Medicine.Clinic.DataAccess" table="indications" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <property name="Code" column ="code" type="String"/>
+    <property name="Name" column ="name" type="String"/>
+  </class>
+</hibernate-mapping>

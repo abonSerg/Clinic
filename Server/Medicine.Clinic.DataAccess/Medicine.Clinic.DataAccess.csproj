@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27682810-7F5E-4946-B20B-395AE6E223DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISD.Clinic.DataAccess</RootNamespace>
+    <AssemblyName>ISD.Clinic.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>C:\code\Share libs\NHibernate\Required_Bins\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>C:\code\Share libs\Log4Net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>C:\code\Share libs\NHibernate\Required_Bins\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\code\Share libs\NHibernate\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbAccess.cs" />
+    <Compile Include="EntitiesException\SpecimenException\SpecimenDefaultTubeException.cs" />
+    <Compile Include="EntitiesException\SpecimenException\SpecimenException.cs" />
+    <Compile Include="EntitiesException\SpecimenException\SpecimenMandatoryFieldsException.cs" />
+    <Compile Include="EntitiesException\TubeExceptions\TubeException.cs" />
+    <Compile Include="EntitiesException\TubeExceptions\TubeMandatoryFieldsException.cs" />
+    <Compile Include="EntitiesException\TubeExceptions\TubeVolumeException.cs" />
+    <Compile Include="Entities\Apartment.cs" />
+    <Compile Include="Entities\Clinic.cs" />
+    <Compile Include="Entities\ConcreteDiagnosis.cs" />
+    <Compile Include="Entities\ConcreteIndication.cs" />
+    <Compile Include="Entities\ConcreteSpecimen.cs" />
+    <Compile Include="Entities\ConcreteTest.cs" />
+    <Compile Include="Entities\ConcreteTube.cs" />
+    <Compile Include="Entities\Diagnosis.cs" />
+    <Compile Include="Entities\Doctor.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityInterfaces\ICodedEntity.cs" />
+    <Compile Include="Entities\EntityInterfaces\INamedEntity.cs" />
+    <Compile Include="Entities\EntityInterfaces\IOrderedEntity.cs" />
+    <Compile Include="Entities\EntityInterfaces\IPerson.cs" />
+    <Compile Include="Entities\Indication.cs" />
+    <Compile Include="Entities\Interpretation.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\Patient.cs" />
+    <Compile Include="Entities\Sex.cs" />
+    <Compile Include="Entities\Specimen.cs" />
+    <Compile Include="Entities\Test.cs" />
+    <Compile Include="Entities\TestSexAllowed.cs" />
+    <Compile Include="Entities\TestTubeAttach.cs" />
+    <Compile Include="Entities\Tube.cs" />
+    <Compile Include="Entities\Visit.cs" />
+    <Compile Include="EntityMethods\ApartmentMethods.cs" />
+    <Compile Include="EntityMethods\ClinicMethods.cs" />
+    <Compile Include="EntityMethods\ConcreteDiagnosisMethods.cs" />
+    <Compile Include="EntityMethods\ConcreteIndicationMethods.cs" />
+    <Compile Include="EntityMethods\ConcreteSpecimenMethods.cs" />
+    <Compile Include="EntityMethods\ConcreteTestMethods.cs" />
+    <Compile Include="EntityMethods\ConcreteTubeMethods.cs" />
+    <Compile Include="EntityMethods\DiagnosisMethods.cs" />
+    <Compile Include="EntityMethods\DoctorMethods.cs" />
+    <Compile Include="EntityMethods\IndicationMethods.cs" />
+    <Compile Include="EntityMethods\InterpretationMethods.cs" />
+    <Compile Include="EntityMethods\OrderMethods.cs" />
+    <Compile Include="EntityMethods\PatientMethods.cs" />
+    <Compile Include="EntityMethods\SexMethods.cs" />
+    <Compile Include="EntityMethods\SpecimenMethods.cs" />
+    <Compile Include="EntityMethods\TestMethods.cs" />
+    <Compile Include="EntityMethods\TestSexAllowedMethods.cs" />
+    <Compile Include="EntityMethods\TestTubeAttachMethods.cs" />
+    <Compile Include="EntityMethods\TubeMethods.cs" />
+    <Compile Include="EntityMethods\VisitMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\SpecimenTubeAttach.cs" />
+    <Compile Include="EntityMethods\SpecimenTubeAttachMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping Files\Apartment.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Clinic.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\ConcreteDiagnosis.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\ConcreteIndication.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\ConcreteSpecimen.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\ConcreteTest.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\ConcreteTube.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Diagnosis.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Doctor.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Indication.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Interpretation.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Order.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Patient.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Sex.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Specimen.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Test.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Tube.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\Visit.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mapping Files\SpecimenTubeAttach.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\TestSexAllowed.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mapping Files\TestTubeAttach.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Medicine.Clinic.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Medicine.Clinic.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DtoIndication">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DtoEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEdit" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DtoIndication" nillable="true" type="tns:DtoIndication" />
+  <xs:complexType name="DtoEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DtoEntity" nillable="true" type="tns:DtoEntity" />
+  <xs:complexType name="ArrayOfDtoIndication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DtoIndication" nillable="true" type="tns:DtoIndication" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDtoIndication" nillable="true" type="tns:ArrayOfDtoIndication" />
+</xs:schema>

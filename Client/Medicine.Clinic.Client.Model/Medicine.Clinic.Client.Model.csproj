@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E10B40CB-474B-4A46-BA88-1A05F08996DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISD.Clinic.Client.Model</RootNamespace>
+    <AssemblyName>ISD.Clinic.Client.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClinicDataSetAccess">
+      <HintPath>..\..\ClinicDataSet\ClinicDataSetAccess\bin\Debug\ClinicDataSetAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApartmentModel\ApartmentModel.cs" />
+    <Compile Include="BillingModel\BillingModel.cs" />
+    <Compile Include="ClinicModel\ClinicModel.cs" />
+    <Compile Include="DiagnosisModel\DiagnosisModel.cs" />
+    <Compile Include="DoctorModel\DoctorModel.cs" />
+    <Compile Include="GridControlsEntities\ApartmentForGrid.cs" />
+    <Compile Include="GridControlsEntities\DiagnosisForGrid.cs" />
+    <Compile Include="GridControlsEntities\DoctorForGrid.cs" />
+    <Compile Include="GridControlsEntities\IndicationForGrid.cs" />
+    <Compile Include="GridControlsEntities\PatientForGrid.cs" />
+    <Compile Include="GridControlsEntities\SpecimenForGrid.cs" />
+    <Compile Include="GridControlsEntities\TestForGrid.cs" />
+    <Compile Include="GridControlsEntities\TubeForGrid.cs" />
+    <Compile Include="GridControlsEntities\VisitForGrid.cs" />
+    <Compile Include="ModelInterfaces\ApartmnetModelInterfaces\INewApartmentEditModel.cs" />
+    <Compile Include="ModelInterfaces\ApartmnetModelInterfaces\INewApartmentModel.cs" />
+    <Compile Include="ModelInterfaces\ApartmnetModelInterfaces\IApartmentModel.cs" />
+    <Compile Include="ModelInterfaces\BillingModelInterfaces\IBillingModel.cs" />
+    <Compile Include="ModelInterfaces\InterpretationModelInterfaces\IInterpretationModel.cs" />
+    <Compile Include="InterpretationModel\InterpretationModel.cs" />
+    <Compile Include="ModelInterfaces\VisitModelInterfaces\INewVisitEditModel.cs" />
+    <Compile Include="ModelInterfaces\VisitModelInterfaces\INewVisitModel.cs" />
+    <Compile Include="ModelInterfaces\VisitModelInterfaces\IVisitModel.cs" />
+    <Compile Include="ModelInterfaces\OrderModelInterfaces\INewOrderEditModel.cs" />
+    <Compile Include="ModelInterfaces\OrderModelInterfaces\INewOrderModel.cs" />
+    <Compile Include="ModelInterfaces\OrderModelInterfaces\IOrderModel.cs" />
+    <Compile Include="ModelInterfaces\PatientModelInterfaces\INewPatientEditModel.cs" />
+    <Compile Include="ModelInterfaces\PatientModelInterfaces\INewPatientModel.cs" />
+    <Compile Include="ModelInterfaces\PatientModelInterfaces\IPatientModel.cs" />
+    <Compile Include="ModelInterfaces\IndicationModelInterfaces\INewIndicationEditModel.cs" />
+    <Compile Include="ModelInterfaces\IndicationModelInterfaces\INewIndicationModel.cs" />
+    <Compile Include="ModelInterfaces\IndicationModelInterfaces\IIndicationModel.cs" />
+    <Compile Include="IndicationModel\IndicationModel.cs" />
+    <Compile Include="ModelInterfaces\DiagnosisModelInterfaces\INewDiagnosisEditModel.cs" />
+    <Compile Include="ModelInterfaces\DiagnosisModelInterfaces\INewDiagnosisModel.cs" />
+    <Compile Include="ModelInterfaces\DiagnosisModelInterfaces\IDiagnosisModel.cs" />
+    <Compile Include="ModelInterfaces\DoctorModeIInterfaces\IDoctorModel.cs" />
+    <Compile Include="ModelInterfaces\DoctorModeIInterfaces\INewDoctorEditModel.cs" />
+    <Compile Include="ModelInterfaces\DoctorModeIInterfaces\INewDoctorModel.cs" />
+    <Compile Include="ModelInterfaces\SexModelInterfaces\INewSexEditModel.cs" />
+    <Compile Include="ModelInterfaces\SexModelInterfaces\INewSexModel.cs" />
+    <Compile Include="ModelInterfaces\SexModelInterfaces\ISexModel.cs" />
+    <Compile Include="ModelInterfaces\TestModelInterfaces\INewTestEditModel.cs" />
+    <Compile Include="ModelInterfaces\TestModelInterfaces\INewTestModel.cs" />
+    <Compile Include="ModelInterfaces\TestModelInterfaces\ITestModel.cs" />
+    <Compile Include="ModelInterfaces\SpecimenModelInterfaces\INewSpecimenEditModel.cs" />
+    <Compile Include="ModelInterfaces\SpecimenModelInterfaces\INewSpecimenModel.cs" />
+    <Compile Include="ModelInterfaces\SpecimenModelInterfaces\ISpecimenModel.cs" />
+    <Compile Include="ModelInterfaces\ClinicModelInterfaces\IClinicModel.cs" />
+    <Compile Include="ModelInterfaces\ClinicModelInterfaces\INewClinicEditModel.cs" />
+    <Compile Include="ModelInterfaces\ClinicModelInterfaces\INewClinicModel.cs" />
+    <Compile Include="ModelInterfaces\IMainModel.cs" />
+    <Compile Include="ModelInterfaces\TubeModelInterfaces\INewTubeEditModel.cs" />
+    <Compile Include="ModelInterfaces\TubeModelInterfaces\INewTubeModel.cs" />
+    <Compile Include="ModelInterfaces\TubeModelInterfaces\ITubeModel.cs" />
+    <Compile Include="ClinicModel\NewClinicModel.cs" />
+    <Compile Include="DoctorModel\NewDoctorModel.cs" />
+    <Compile Include="DiagnosisModel\NewDiagnosisModel.cs" />
+    <Compile Include="IndicationModel\NewIndicationModel.cs" />
+    <Compile Include="ApartmentModel\NewApartmentModel.cs" />
+    <Compile Include="Service References\ApartmentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InterpretationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <Compile Include="VisitModel\NewVisitModel.cs" />
+    <Compile Include="OrderModel\NewOrderEditModel.cs" />
+    <Compile Include="OrderModel\NewOrderModel.cs" />
+    <Compile Include="OrderModel\OrderModel.cs" />
+    <Compile Include="PatientModel\NewPatientModel.cs" />
+    <Compile Include="PatientModel\PatientModel.cs" />
+    <Compile Include="Service References\DiagnosisService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DoctorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IndicationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PatientService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SexService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VisitService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SexModel\NewSexModel.cs" />
+    <Compile Include="SexModel\SexModel.cs" />
+    <Compile Include="TestModel\NewTestModel.cs" />
+    <Compile Include="Service References\TestService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SpecimenModel\NewSpecimenModel.cs" />
+    <Compile Include="Service References\ClinicService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SpecimenService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TubeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SpecimenModel\SpecimenModel.cs" />
+    <Compile Include="MainModel.cs" />
+    <Compile Include="TestModel\TestModel.cs" />
+    <Compile Include="TubeModels\NewTubeModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TubeModels\TubeModel.cs" />
+    <Compile Include="VisitModel\VisitModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\ApartmentService\ApartmentService.wsdl" />
+    <None Include="Service References\ApartmentService\ApartmentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApartmentService\ApartmentService1.wsdl" />
+    <None Include="Service References\ApartmentService\ApartmentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApartmentService\ApartmentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ApartmentService\ISD.Clinic.Client.Model.ApartmentService.DtoApartment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClinicService\ClinicService.wsdl" />
+    <None Include="Service References\ClinicService\ClinicService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicService\ClinicService1.wsdl" />
+    <None Include="Service References\ClinicService\ClinicService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicService\ClinicService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClinicService\ISD.Clinic.Client.Model.ClinicService.DtoClinic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DiagnosisService\DiagnosisService.wsdl" />
+    <None Include="Service References\DiagnosisService\DiagnosisService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosisService\DiagnosisService1.wsdl" />
+    <None Include="Service References\DiagnosisService\DiagnosisService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosisService\DiagnosisService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosisService\ISD.Clinic.Client.Model.DiagnosisService.DtoDiagnosis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DoctorService\DoctorService.wsdl" />
+    <None Include="Service References\DoctorService\DoctorService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DoctorService\DoctorService1.wsdl" />
+    <None Include="Service References\DoctorService\DoctorService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DoctorService\DoctorService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DoctorService\ISD.Clinic.Client.Model.DoctorService.DtoDoctor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\IndicationService\IndicationService.wsdl" />
+    <None Include="Service References\IndicationService\IndicationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IndicationService\IndicationService1.wsdl" />
+    <None Include="Service References\IndicationService\IndicationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IndicationService\IndicationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IndicationService\ISD.Clinic.Client.Model.IndicationService.DtoIndication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InterpretationService\InterpretationService.wsdl" />
+    <None Include="Service References\InterpretationService\InterpretationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InterpretationService\InterpretationService1.wsdl" />
+    <None Include="Service References\InterpretationService\InterpretationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InterpretationService\InterpretationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InterpretationService\ISD.Clinic.Client.Model.InterpretationService.DtoConcreteDiagnosis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InterpretationService\ISD.Clinic.Client.Model.InterpretationService.DtoInterpretation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoConcreteIndication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoConcreteSpecimen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoConcreteTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoConcreteTube.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoOrder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoSpecimenTubeAttach.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\ISD.Clinic.Client.Model.OrderService.DtoTestSexAllowed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\OrderService\OrderService.wsdl" />
+    <None Include="Service References\OrderService\OrderService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\OrderService1.wsdl" />
+    <None Include="Service References\OrderService\OrderService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderService\OrderService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PatientService\ISD.Clinic.Client.Model.PatientService.DtoPatient.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PatientService\PatientService.wsdl" />
+    <None Include="Service References\PatientService\PatientService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PatientService\PatientService1.wsdl" />
+    <None Include="Service References\PatientService\PatientService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PatientService\PatientService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SexService\ISD.Clinic.Client.Model.SexService.DtoSex.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SexService\SexService.wsdl" />
+    <None Include="Service References\SexService\SexService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SexService\SexService1.wsdl" />
+    <None Include="Service References\SexService\SexService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SexService\SexService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecimenService\ISD.Clinic.Client.Model.SpecimenService.DtoSpecimen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SpecimenService\SpecimenService.wsdl" />
+    <None Include="Service References\SpecimenService\SpecimenService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecimenService\SpecimenService1.wsdl" />
+    <None Include="Service References\SpecimenService\SpecimenService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SpecimenService\SpecimenService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\ISD.Clinic.Client.Model.TestService.DtoConcreteTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\ISD.Clinic.Client.Model.TestService.DtoTest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TestService\TestService.wsdl" />
+    <None Include="Service References\TestService\TestService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\TestService1.wsdl" />
+    <None Include="Service References\TestService\TestService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TestService\TestService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TubeService\ISD.Clinic.Client.Model.TubeService.DtoTube.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TubeService\TubeService.wsdl" />
+    <None Include="Service References\TubeService\TubeService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TubeService\TubeService1.wsdl" />
+    <None Include="Service References\TubeService\TubeService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TubeService\TubeService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService.wsdl" />
+    <None Include="Service References\VisitService\VisitService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VisitService\VisitService1.wsdl" />
+    <None Include="Service References\VisitService\VisitService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ApartmentService\" />
+    <WCFMetadataStorage Include="Service References\ClinicService\" />
+    <WCFMetadataStorage Include="Service References\DiagnosisService\" />
+    <WCFMetadataStorage Include="Service References\DoctorService\" />
+    <WCFMetadataStorage Include="Service References\IndicationService\" />
+    <WCFMetadataStorage Include="Service References\InterpretationService\" />
+    <WCFMetadataStorage Include="Service References\OrderService\" />
+    <WCFMetadataStorage Include="Service References\PatientService\" />
+    <WCFMetadataStorage Include="Service References\SexService\" />
+    <WCFMetadataStorage Include="Service References\SpecimenService\" />
+    <WCFMetadataStorage Include="Service References\TestService\" />
+    <WCFMetadataStorage Include="Service References\TubeService\" />
+    <WCFMetadataStorage Include="Service References\VisitService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TubeService\TubeService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TubeService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TubeService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TubeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicService\ClinicService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClinicService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecimenService\SpecimenService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecimenService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecimenService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SpecimenService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SexService\SexService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\TestService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TestService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SexService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SexService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SexService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoctorService\DoctorService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoctorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoctorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DoctorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiagnosisService\DiagnosisService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiagnosisService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiagnosisService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DiagnosisService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IndicationService\IndicationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IndicationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IndicationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IndicationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PatientService\PatientService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PatientService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PatientService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PatientService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrderService\OrderService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrderService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrderService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OrderService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\VisitService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VisitService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InterpretationService\InterpretationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InterpretationService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InterpretationService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InterpretationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApartmentService\ApartmentService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApartmentService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApartmentService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ApartmentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

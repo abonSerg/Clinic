@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.Visit, Medicine.Clinic.DataAccess" table="visits" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <property name="BillingNumber" column ="billing_number" type="String"/>
+    <many-to-one name="Patient" column ="patient_id" class="Medicine.Clinic.DataAccess.Patient"/>
+    <many-to-one name="Doctor" column ="doctor_id" class="Medicine.Clinic.DataAccess.Doctor"/>
+    <many-to-one name="Apartment" column ="apartment_id" class="Medicine.Clinic.DataAccess.Apartment"/>
+  </class>
+</hibernate-mapping>

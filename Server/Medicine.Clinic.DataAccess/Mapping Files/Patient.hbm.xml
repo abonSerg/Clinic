@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="Medicine.Clinic.DataAccess.Patient, Medicine.Clinic.DataAccess" table="patients" lazy="true">
+    <id name="Id" column="id" type="Int32"/>
+    <property name="Mrn" column ="mrn" type="String"/>
+    <property name="FirstName" column ="first_name" type="String"/>
+    <property name="LastName" column ="last_name" type="String"/>
+    <property name="MiddleName" column ="middle_name" type="String"/>
+    <property name="Ssn" column ="ssn" type="String"/>
+    <property name="Dob" column ="dob" type="DateTime"/>
+    <many-to-one name="Sex" column ="sex_id" class="Medicine.Clinic.DataAccess.Sex"/>
+    <property name="Dod" column ="dod" type="DateTime"/>
+  </class>
+</hibernate-mapping>
